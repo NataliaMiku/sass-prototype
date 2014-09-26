@@ -28,14 +28,6 @@
 
 // Generating :before or :after pseudo-element shapes
 
-@mixin img-replace($img, $w, $h, $disp: block) {
-  background-image: url('#{$path--rel}/#{$img}');
-  background-repeat: no-repeat;
-  width: $w;
-  height: $h;
-  display: $disp;
-}
-
 @mixin p-el(
     $el,
     $el-w: null,
@@ -51,4 +43,14 @@
     @else {
       @error "'#{$el}' is not a valid pseudo-element";
     }
+}
+
+//image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
 }

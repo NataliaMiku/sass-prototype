@@ -9,15 +9,18 @@
 }
 
 body {
+    color: palette(grey);
     font-family: $font-family--primary;
     font-size: $base__font-size;
     line-height: ($base__line/$base__font-size);
 }
 
-header {
-    padding: em(48px) 0;
-    text-align: center;
-}
+// header {
+//     padding: em(48px) 0;
+//     text-align: center;
+// }
+
+// Text
 
 h1 {
     @extend %hdln-prim;
@@ -49,10 +52,11 @@ a {
 
 p {
   font-size: em(18px);
-  line-height: (27px / 18px);
+  line-height: (27px/18px);
   margin: 0 0 em(30px, 18px);
   font-weight: $font-weight--light;
 }
+
 blockquote{
   font-size: em(24px);
   font-style: italic;
@@ -84,6 +88,8 @@ textarea {
 	display: block;
 	outline: 0;
 	border: 0;
+  padding: 15px;
+	width: 100%;
 }
 
 input:focus,
