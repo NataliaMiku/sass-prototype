@@ -17,13 +17,19 @@
 
 // Functions and Directives
 
+//Color Palette Modifiers
+
+@function palette($palette, $shade: 'base') {
+    @return map-get(map-get($palettes, $palette), $shade);
+}
+
 
 // Mixins
 
 @mixin bg-colors($map) {
   @each $theme, $color in $map {
     &--#{$theme} {
-        background-color: $color;
+      background-color: $color;
     }
   }
 }
