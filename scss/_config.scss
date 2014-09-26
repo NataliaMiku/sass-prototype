@@ -1,0 +1,52 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google          : 'http://fonts.googleapis.com/css?fontfamily=Lata:100,300,400,700,900';
+$font-family--primary      : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary    : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin         : 100;
+$font-weight--light        : 300;
+$font-weight--mrdium       : 400;
+$font-weight--bold         : 700;
+$font-weight--ultrabold    : 900;
+
+// Descriptive Base Colors
+
+$white                     : #fff;
+$black                     : #000;
+$grey                      : #434547;
+
+$bermuda                   : #89d1d8;
+$carnation                 : #f46150;
+$jelly-bean                : #118daf;
+$fontain-blue              : #5bc6c3;
+$jungle-green              : #33a582;
+$violet-red                : #f7476e;
+
+// Color Usage
+
+$color-primary             : $fontain-blue;
+$color-secondary           : $bermuda;
+$color-accent              : $jungle-green;
+$color-shadow              : rgba($black,.2);
+
+//UI Colors
+
+$ui-colors: (
+  default : $jelly-bean,
+  success : $jungle-green,
+  error   : $violet-red,
+  warning : $carnation,
+  info    : $fontain-blue
+);
+
+// Text
+
+$base__font-size           : 16px;
+$base__line                : 24px;
