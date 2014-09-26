@@ -23,7 +23,6 @@
     @return map-get(map-get($palettes, $palette), $shade);
 }
 
-
 // Mixins
 
 @mixin bg-colors($map) {
@@ -32,4 +31,45 @@
       background-color: $color;
     }
   }
+}
+
+//Mixin Replace
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
+}
+
+@mixin p-el(
+    $el,
+    $el-w: null,
+    $el-h: null) {
+    @if $el == "before" or $el == "after" {
+        &:#{$el} {
+          @extend %pseudos;
+          width: $el-w;
+          height: $el-h;
+          @content;
+        }
+    }
+    @else {
+      @error "'#{$el}' is not a valid pseudo-element";
+    }
+}
+
+// BEM Selectors
+
+@mixin e($element) {
+    &__#{$element} {
+      @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+      @content;
+    }
 }
