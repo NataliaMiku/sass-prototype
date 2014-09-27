@@ -13,10 +13,10 @@
           <b class="srt">Poly - UI Toolkit</b>
         </a>
         <nav class="navbar" role="navigation">
-          <span class="icn-toggle">
+          <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
             <b class="srt">Toggle</b>
           </span>
-          <ul class="nav">
+          <ul class="nav is-collapsed-mobile">
             <li class="nav__item"><a href="#">Typography</a></li>
             <li class="nav__item"><a href="#">Buttons</a></li>
             <li class="nav__item"><a href="#">Forms</a></li>
@@ -27,10 +27,10 @@
             </li>
           </ul>
         </nav>
-
     </header>
+  </div>
 
-    <div class="grid">
+    <div class="grid is-hidden-mobile">
       <div class="grid__col--12">
           <img class="img--hero" src="img/hero.jpg" alt="Poly - A simple UI Kit">
       </div>
@@ -72,7 +72,7 @@
     </div>
     <h4 class="grid">Form Elements</h4>
     <div class="grid">
-      <div class="grid__col--12">
+      <div class="grid__col--7">
           <form class="form">
             <label class="form__label--hidden" for="name">Name:</label>
             <input class="form__input" type="text" id="name" placeholder="Name">
@@ -86,6 +86,16 @@
             <input class="btn--default" type="submit" value="Submit">
             <input class="btn--warning" type="reset" value="Reset">
           </form>
+      </div>
+       <div class="grid__col--4">
+        <img class="img--avatar" src="img/avatar.png" alt="Avatar">
+        <form>
+            <label class="form__label--hidden" for="username">Username:</label>
+            <input class="form__input" type="text" id="username" placeholder="Username">
+            <label class="form__label--hidden" for="password">Password:</label>
+            <input class="form__input" type="password" id="password" placeholder="Password">
+            <input class="form__btn" type="submit" value="Login">
+        </form>
       </div>
     </div>
 
@@ -112,7 +122,12 @@
           </footer>
       </div>
 
-    </div>
+      <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script>
+        $('#toggle').click(function() {
+            $(this).next('.nav').toggleClass("is-collapsed-mobile");
+        });
+      </script>
 
   </body>
 </html>

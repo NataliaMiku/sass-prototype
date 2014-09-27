@@ -402,6 +402,8 @@ h2, .headline-secondary--grouped, .headline-secondary--grouped--grouped {
 .img--avatar {
   display: block;
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1.5em; }
 .img--hero {
   margin-bottom: 2.625em; }
@@ -481,5 +483,22 @@ h2, .headline-secondary--grouped, .headline-secondary--grouped--grouped {
     height: 3px;
     background: #999da1;
     top: 4px; }
+
+@media (min-width: 1px) and (max-width: 768px) {
+  .is-displayed-mobile {
+    display: block; }
+    .is-hidden-mobile {
+      display: none; } }
+@media (min-width: 769px) {
+  .is-displayed-mobile {
+    display: none; } }
+
+@media (min-width: 1px) and (max-width: 768px) {
+  .is-collapsed-mobile {
+    visibility: collapse;
+    padding: 0;
+    height: 0;
+    margin: 0;
+    line-height: 0; } }
 
 /*# sourceMappingURL=application.css.map */

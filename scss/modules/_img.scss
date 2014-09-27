@@ -11,6 +11,8 @@
     @include m(avatar) {
       display: block;
       border-radius: $br--round;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: em(24px);
     }
     @include m(hero) {
