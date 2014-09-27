@@ -4,9 +4,12 @@
 
 // Nav Items
 
-%nav-item-disp {
-  display: inline-block;
-  margin: 0 em(12px);
+%nav-item-horz {
+  //border-bottom: 1px solid palette(grey, xx-light);
+  @include mq(medium) {
+    display: inline-block;
+    margin: 0 em(12px);
+  }
 }
 
 %nav-item-link {
@@ -15,6 +18,11 @@
   display: block;
   padding: em(8px, 18px);
   border-bottom: 1px solid transparent;
+  @include mq(small) {
+    border-bottom-color: palette(grey, xx-light);
+    padding-top: em(14px, 18px);
+    padding-bottom: em(14px, 18px);
+  }
 }
 
 %nav-item-on {

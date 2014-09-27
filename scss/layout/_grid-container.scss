@@ -14,7 +14,7 @@
 
     // Set a max-width grid container
 
-    @media(min-width: 1100px) {
+    @include mq(large) {
       width: $g-count-max-w;
     }
 
